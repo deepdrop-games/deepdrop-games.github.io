@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Глубина — Deepdrop</title>
+<meta name="description" content="Глубина (Deepdrop) — deep-sea block puzzle for iOS and Android. Support and privacy policy.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --bg: #04071a; --bg-card: #0a1130; --fg: #e8eefc;
+    --fg-dim: #9fb0d4; --accent: #4fd6e8; --rule: #1a2550;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f5f7fc; --bg-card: #ffffff; --fg: #121a33;
+      --fg-dim: #4d5c80; --accent: #0a7f93; --rule: #dde3f0;
+      color-scheme: light;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 400 17px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap {
+    max-width: 40rem; margin: 0 auto; padding-block: 4rem 5rem;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 0.6rem;
+  }
+  h1 { font-size: clamp(2rem, 7vw, 3rem); line-height: 1.1; margin: 0 0 0.75rem; text-wrap: balance; }
+  .lede { font-size: 1.15rem; color: var(--fg-dim); margin: 0 0 3rem; text-wrap: balance; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 0.6rem; padding-top: 1.75rem; border-top: 1px solid var(--rule); }
+  p { color: var(--fg-dim); margin: 0 0 1rem; }
+  a { color: var(--accent); }
+  .en { color: var(--fg-dim); font-size: 15px; }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 14px; color: var(--fg-dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="eyebrow">iOS · Android</p>
+<h1>Глубина</h1>
+<p class="lede">Головоломка о погружении: ставь фигуры, собирай линии, уходи глубже, чем
+в прошлый раз. Фонарь у Люма светит ровно настолько, насколько ты осторожен.</p>
+
+<h2>Поддержка</h2>
+<p>Вопросы, баги, предложения — на почту:
+<a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a>.
+Если игра упала, напиши модель телефона и версию iOS — этого обычно хватает.</p>
+<p class="en">Support: write to <a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a>.
+For a crash, include your device model and OS version.</p>
+
+<h2>Конфиденциальность</h2>
+<p>Игра не собирает никаких данных. Прогресс хранится только на твоём устройстве.
+<a href="privacy/">Полная политика конфиденциальности</a> (ru / en).</p>
+
+<footer>
+  <p>Глубина (Deepdrop) · com.draev.deepdrop · Dmitrii Raev</p>
+</footer>
+
+</div>
+</body>
+</html>
