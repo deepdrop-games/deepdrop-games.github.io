@@ -114,12 +114,19 @@
 события: начало и конец погружения, достигнутая глубина, номер уровня и причина проигрыша,
 использование бустеров, открытие магазина. Событие не содержит ни имени, ни адреса, ни
 чего-либо, что указывает на конкретного человека.</p>
-<p>Обработчик — <strong>Unity Technologies</strong> (Unity Analytics). Unity получает
-технические данные устройства: модель, версию операционной системы, язык и сгенерированный
-идентификатор установки.
-<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Политика Unity</a>.</p>
-<p><strong>Это выключается.</strong> Настройки → «Анонимная статистика». Выключение
-действует сразу, а не со следующего запуска.</p>
+<p>Обработчик — <strong>Google</strong> (Firebase Analytics, связанный со свойством Google
+Analytics). Google получает технические данные устройства: модель, версию операционной
+системы, язык, страну и сгенерированный идентификатор установки приложения. Этот
+идентификатор не связан с аккаунтом Google и сбрасывается при переустановке.
+<a href="https://firebase.google.com/support/privacy">Политика Google</a>.</p>
+
+<h2>Отчёты о сбоях</h2>
+<p>Если игра падает, отчёт уходит в <strong>Firebase Crashlytics</strong> (тот же обработчик
+— Google): что именно сломалось, на какой строке, модель устройства и версия системы. Отчёт
+не содержит твоего прогресса и ничего, что указывает на конкретного человека.</p>
+<p><strong>И статистика, и отчёты о сбоях выключаются</strong> одним переключателем:
+Настройки → «Анонимная статистика». Выключение действует сразу, а не со следующего
+запуска.</p>
 
 <h2>Реклама</h2>
 <p>В текущей версии рекламы нет.</p>
@@ -184,12 +191,18 @@ with us or in a cloud. You can also erase it in <strong>Settings → Reset progr
 and end of a dive, the depth reached, the level number and the reason a level was lost,
 booster use, opening the shop. An event contains no name, no address and nothing that
 identifies a particular person.</p>
-<p>The processor is <strong>Unity Technologies</strong> (Unity Analytics). Unity receives
-technical device data: model, operating system version, language, and a generated
-installation identifier.
-<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's policy</a>.</p>
-<p><strong>This can be switched off.</strong> Settings → "Anonymous usage data". It takes
-effect immediately, not at the next launch.</p>
+<p>The processor is <strong>Google</strong> (Firebase Analytics, linked to a Google Analytics
+property). Google receives technical device data: model, operating system version, language,
+country and a generated app-instance identifier. That identifier is not tied to a Google
+account and is reset when the app is reinstalled.
+<a href="https://firebase.google.com/support/privacy">Google's policy</a>.</p>
+
+<h2>Crash reports</h2>
+<p>If the game crashes, a report goes to <strong>Firebase Crashlytics</strong> (the same
+processor, Google): what broke, on which line, the device model and the OS version. A report
+contains none of your progress and nothing that identifies a particular person.</p>
+<p><strong>Statistics and crash reports are switched off together</strong>, by one setting:
+Settings → "Anonymous usage data". It takes effect immediately, not at the next launch.</p>
 
 <h2>Advertising</h2>
 <p>There is no advertising in the current version.</p>
