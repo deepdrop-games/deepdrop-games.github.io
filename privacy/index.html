@@ -3,17 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Политика конфиденциальности — Deepdrop</title>
-<meta name="description" content="Privacy policy for Deepdrop — anonymous usage data only, and it can be switched off.">
+<title>Deepdrop — Политика конфиденциальности / Privacy Policy</title>
+<meta name="description" content="How Deepdrop handles data: what stays on the device, what Firebase receives, and how to switch it off.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
 <style>
   :root {
-    --bg: #04071a;
-    --bg-card: #0a1130;
-    --fg: #e8eefc;
-    --fg-dim: #9fb0d4;
-    --accent: #4fd6e8;
-    --rule: #1a2550;
+    --bg: #04071a; --bg-card: #0a1130; --fg: #e8eefc;
+    --fg-dim: #9fb0d4; --accent: #4fd6e8; --rule: #1a2550;
     color-scheme: dark;
   }
   @media (prefers-color-scheme: light) {
@@ -25,219 +21,123 @@
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
+    margin: 0; background: var(--bg); color: var(--fg);
     font: 400 17px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     -webkit-text-size-adjust: 100%;
   }
   .wrap {
-    max-width: 44rem;
-    margin: 0 auto;
-    padding-block: 3rem 5rem;
+    max-width: 40rem; margin: 0 auto; padding-block: 4rem 5rem;
     padding-left: max(20px, env(safe-area-inset-left, 0px));
     padding-right: max(20px, env(safe-area-inset-right, 0px));
   }
-  header { border-bottom: 1px solid var(--rule); padding-bottom: 1.75rem; margin-bottom: 2.25rem; }
   .eyebrow {
     font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--accent); margin: 0 0 0.6rem;
   }
-  h1 { font-size: clamp(1.7rem, 5vw, 2.3rem); line-height: 1.2; margin: 0 0 1.25rem; text-wrap: balance; }
-  h2 {
-    font-size: 1.2rem; margin: 2.75rem 0 0.75rem; text-wrap: balance;
-    padding-top: 1.5rem; border-top: 1px solid var(--rule);
-  }
-  h2:first-of-type { border-top: 0; padding-top: 0; }
-  p, li { color: var(--fg-dim); }
-  p { margin: 0 0 1rem; }
-  strong { color: var(--fg); font-weight: 600; }
-  ul { margin: 0 0 1rem; padding-left: 1.3rem; }
-  li { margin-bottom: 0.35rem; }
+  h1 { font-size: clamp(2rem, 7vw, 3rem); line-height: 1.1; margin: 0 0 0.75rem; text-wrap: balance; }
+  .lede { font-size: 1.15rem; color: var(--fg-dim); margin: 0 0 3rem; text-wrap: balance; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 0.6rem; padding-top: 1.75rem; border-top: 1px solid var(--rule); }
+  p, li { color: var(--fg-dim); margin: 0 0 1rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: 0 0 0.35rem; }
   a { color: var(--accent); }
-  dl.meta { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1rem; margin: 0; font-size: 15px; }
-  dl.meta dt { color: var(--fg-dim); white-space: nowrap; }
-  dl.meta dd { margin: 0; color: var(--fg); }
-  .lang { display: flex; gap: 0.6rem; margin-bottom: 2rem; font-size: 14px; }
-  .lang a {
-    text-decoration: none; padding: 0.4rem 0.9rem; border: 1px solid var(--rule);
-    border-radius: 999px; color: var(--fg-dim);
-  }
-  .lang a:hover { border-color: var(--accent); color: var(--accent); }
-  .none {
-    background: var(--bg-card); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
-    border-radius: 10px; padding: 1.1rem 1.25rem; margin: 0 0 1.25rem;
-  }
-  .none p { margin: 0; }
-  .none strong { font-size: 1.15rem; }
-  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 14px; color: var(--fg-dim); }
-  section[lang="en"] { margin-top: 5rem; }
+  strong { color: var(--fg); }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 3.5rem 0; }
+  .en { color: var(--fg-dim); font-size: 15px; }
+  .lang { margin: 0 0 2.5rem; font-size: 14px; }
+  .lang a { margin-right: 1.25rem; }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 14px; color: var(--fg-dim); }
 </style>
 </head>
 <body>
 <div class="wrap">
-
-<header>
-  <p class="eyebrow">Deepdrop</p>
-  <h1>Политика конфиденциальности</h1>
-  <dl class="meta">
-    <dt>Дата вступления в силу</dt><dd>17 октября 2026 года</dd>
-    <dt>Разработчик</dt><dd>Dmitrii Raev</dd>
-    <dt>Контакт</dt><dd><a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a></dd>
-  </dl>
-</header>
-
-<nav class="lang"><a href="#en">English version ↓</a></nav>
-
-<section lang="ru">
-
+<p class="eyebrow">Deepdrop</p><h1>Политика конфиденциальности</h1><p class="lede">Privacy Policy · русский ниже, English below.</p><p class="lang"><a href="#ru">Русский</a><a href="#en">English</a></p><section id="ru"><ul>
+<li><strong>Дата вступления в силу:</strong> 18 октября 2026 года</li>
+<li><strong>Разработчик:</strong> Dmitrii Raev</li>
+<li><strong>Контакт:</strong> <a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a></li>
+<li><strong>Опубликовано:</strong> <a href="https://deepdrop-games.github.io/privacy/">https://deepdrop-games.github.io/privacy/</a></li>
+</ul>
 <h2>Коротко</h2>
-<div class="none"><p><strong>Регистрации нет. Серверов нет. Прогресс — только на твоём устройстве.</strong></p></div>
-<p>Игра собирает обезличенную статистику о том, как в неё играют, и это можно выключить
-в настройках.</p>
-
+<p>Игра не просит регистрацию, не знает твоего имени и не хранит ничего на своих серверах — их нет. Она собирает обезличенную статистику о том, как в неё играют, и это можно выключить в настройках. Игровой прогресс лежит только на твоём устройстве.</p>
 <h2>Что хранится на устройстве</h2>
 <p>Весь прогресс сохраняется <strong>только в приватном каталоге приложения</strong>:</p>
 <ul>
-  <li>рекорды погружений и число сыгранных партий;</li>
-  <li>внутриигровые монеты, кристаллы и бустеры;</li>
-  <li>собранные виды существ;</li>
-  <li>серия ежедневных наград и задания дня;</li>
-  <li>настройки звука, языка и статистики.</li>
+<li>рекорды погружений и число сыгранных партий</li>
+<li>внутриигровые монеты, кристаллы и бустеры</li>
+<li>собранные виды существ</li>
+<li>серия ежедневных наград и задания дня</li>
+<li>настройки звука, языка и статистики</li>
 </ul>
-<p>Эти данные никуда не отправляются. Удаление приложения удаляет их безвозвратно — копии
-нет ни у нас, ни в облаке. Внутри игры их можно стереть в разделе
-<strong>Настройки → Сбросить прогресс</strong>.</p>
-
+<p>Эти данные никуда не отправляются. Удаление приложения удаляет их безвозвратно — копии нет ни у нас, ни в облаке. Внутри игры их можно стереть в разделе <strong>Настройки → Сбросить прогресс</strong>.</p>
 <h2>Статистика использования</h2>
-<p>Чтобы понимать, где игра непонятна или слишком сложна, она отправляет обезличенные
-события: начало и конец погружения, достигнутая глубина, номер уровня и причина проигрыша,
-использование бустеров, открытие магазина. Событие не содержит ни имени, ни адреса, ни
-чего-либо, что указывает на конкретного человека.</p>
-<p>Обработчик — <strong>Google</strong> (Firebase Analytics, связанный со свойством Google
-Analytics). Google получает технические данные устройства: модель, версию операционной
-системы, язык, страну и сгенерированный идентификатор установки приложения. Этот
-идентификатор не связан с аккаунтом Google и сбрасывается при переустановке.
-<a href="https://firebase.google.com/support/privacy">Политика Google</a>.</p>
-
+<p>Чтобы понимать, где игра непонятна или слишком сложна, она отправляет обезличенные события: начало и конец погружения, достигнутая глубина, номер уровня и причина проигрыша, использование бустеров, открытие магазина. Событие не содержит ни имени, ни адреса, ни чего-либо, что указывает на конкретного человека.</p>
+<p>Обработчик — <strong>Google</strong> (Firebase Analytics, связанный со свойством Google Analytics). Google получает технические данные устройства: модель, версию операционной системы, язык, страну и сгенерированный идентификатор установки приложения. Этот идентификатор не связан с аккаунтом Google и сбрасывается при переустановке. Политика Google: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
 <h2>Отчёты о сбоях</h2>
-<p>Если игра падает, отчёт уходит в <strong>Firebase Crashlytics</strong> (тот же обработчик
-— Google): что именно сломалось, на какой строке, модель устройства и версия системы. Отчёт
-не содержит твоего прогресса и ничего, что указывает на конкретного человека.</p>
-<p><strong>И статистика, и отчёты о сбоях выключаются</strong> одним переключателем:
-Настройки → «Анонимная статистика». Выключение действует сразу, а не со следующего
-запуска.</p>
-
+<p>Если игра падает, отчёт уходит в <strong>Firebase Crashlytics</strong> (тот же обработчик — Google): что именно сломалось, на какой строке, модель устройства и версия системы. Отчёт не содержит твоего прогресса и ничего, что указывает на конкретного человека.</p>
+<p><strong>И статистика, и отчёты о сбоях выключаются</strong> одним переключателем: Настройки → «Анонимная статистика». Выключение действует сразу, а не со следующего запуска.</p>
 <h2>Реклама</h2>
-<p>В текущей версии рекламы нет.</p>
-<p>Когда она появится, это будет <strong>Unity Ads</strong>, только с вознаграждением —
-ролик, который можно посмотреть добровольно в обмен на продолжение забега или дополнительные
-ходы. Игра <strong>не запрашивает разрешение на отслеживание</strong> и не использует
-рекламный идентификатор устройства (IDFA): реклама подбирается по контексту, а не по твоей
-истории в других приложениях. Эта страница будет обновлена до выхода такой версии.</p>
-
+<p>Реклама в игре — <strong>Google AdMob</strong>, и только с вознаграждением: ролик, который можно посмотреть добровольно в обмен на продолжение забега, дополнительные ходы, жизнь или удвоение ежедневной награды. Отказ не закрывает ничего — он просто оставляет тебя там, где ты был. Никакой рекламы между экранами, на старте или поверх игры нет.</p>
+<p>Та же компания, что обрабатывает статистику и отчёты о сбоях выше, так что список обработчиков данных не удлиняется.</p>
+<p><strong>Если ты в Европейской экономической зоне, Великобритании или Швейцарии</strong>, при первом запуске игра покажет форму согласия Google (UMP) и спросит, можно ли использовать твои данные для рекламы. До ответа ни одного рекламного запроса не уходит, а отказ значит, что предложения с вознаграждением просто не показываются. Вернуться к своему ответу и изменить его можно в любой момент: <strong>Настройки → Настройки рекламы</strong>. Этот пункт появляется ровно там, где форма была показана.</p>
+<p>На iOS игра <strong>не запрашивает разрешение на отслеживание</strong> и не использует рекламный идентификатор устройства (IDFA): реклама подбирается по контексту, а не по твоей истории в других приложениях. На Android у рекламного идентификатора нет отдельного запроса — он доступен приложению, пока ты не отключишь персонализацию в настройках системы, и мы объявляем его использование в форме Data Safety.</p>
+<p>Политика Google о рекламе: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
 <h2>Покупки</h2>
-<p>Покупки внутри приложения обрабатывает <strong>Apple</strong>. Платёжные данные идут
-напрямую к Apple — мы их не видим, не получаем и не храним. Нам приходит только факт, что
-покупка состоялась, чтобы начислить кристаллы.</p>
-
+<p>Покупки внутри приложения обрабатывает магазин платформы: <strong>Apple</strong> в App Store, <strong>Google</strong> в Google Play. Платёжные данные идут напрямую к ним — мы их не видим, не получаем и не храним. Нам приходит только факт, что покупка состоялась, чтобы начислить кристаллы.</p>
+<p>За деньги покупаются только кристаллы. Монеты зарабатываются игрой, и сундуки покупаются за монеты — их шансы написаны на самом сундуке в магазине, до покупки.</p>
 <h2>Дети</h2>
-<p>Игра не предназначена специально для детей и не собирает данные осознанно у лиц младше 13
-лет. Отдельного детского режима в ней нет.</p>
-
+<p>Игра не предназначена специально для детей и не собирает данные осознанно у лиц младше 13 лет. Отдельного детского режима в ней нет.</p>
 <h2>Твои права</h2>
-<p>Данные на устройстве удаляются сбросом прогресса или удалением приложения. Сбор
-статистики отключается в настройках. По вопросам о данных, которые Unity обработала до
-отключения, напиши на <a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a> —
-мы передадим запрос.</p>
-
+<p>Данные на устройстве удаляются сбросом прогресса или удалением приложения. Сбор статистики отключается в настройках — <strong>Настройки → «Анонимная статистика»</strong>. Согласие на рекламу, где оно спрашивалось, меняется в <strong>Настройки → «Настройки рекламы»</strong>. По вопросам о данных, которые Google обработал до отключения, напиши на <a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a> — мы передадим запрос.</p>
 <h2>Изменения</h2>
-<p>Если изменится состав собираемых данных, эта страница будет обновлена <strong>до</strong>
-выхода такой версии, и здесь будет написано, что именно и кем собирается.</p>
-
-</section>
-
-<section lang="en" id="en">
-
-<header>
-  <p class="eyebrow">Deepdrop</p>
-  <h1>Privacy Policy</h1>
-  <dl class="meta">
-    <dt>Effective date</dt><dd>17 October 2026</dd>
-    <dt>Developer</dt><dd>Dmitrii Raev</dd>
-    <dt>Contact</dt><dd><a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a></dd>
-  </dl>
-</header>
-
-<h2>In short</h2>
-<div class="none"><p><strong>No sign-up. No servers. Progress lives only on your device.</strong></p></div>
-<p>The game sends anonymous statistics about how it is played, and that can be turned off in
-settings.</p>
-
-<h2>What is stored on your device</h2>
-<p>All progress is saved <strong>only in the app's private storage</strong>:</p>
-<ul>
-  <li>dive records and the number of games played;</li>
-  <li>in-game coins, gems and boosters;</li>
-  <li>species collected;</li>
-  <li>the daily reward streak and the day's tasks;</li>
-  <li>sound, language and statistics settings.</li>
+<p>Если изменится состав собираемых данных, эта страница будет обновлена <strong>до</strong> выхода такой версии, и здесь будет написано, что именно и кем собирается.</p>
+<h2>Обратная связь</h2>
+<p>Вопросы по этой политике: <a href="mailto:dmitrii.raev@gmail.com.">dmitrii.raev@gmail.com.</a></p>
+<hr></section><hr><section id="en"><ul>
+<li><strong>Effective date:</strong> 18 October 2026</li>
+<li><strong>Developer:</strong> Dmitrii Raev</li>
+<li><strong>Contact:</strong> <a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a></li>
+<li><strong>Published at:</strong> <a href="https://deepdrop-games.github.io/privacy/">https://deepdrop-games.github.io/privacy/</a></li>
 </ul>
-<p>None of it is sent anywhere. Deleting the app deletes it permanently — there is no copy,
-with us or in a cloud. You can also erase it in <strong>Settings → Reset progress</strong>.</p>
-
+<h2>In short</h2>
+<p>The game has no sign-up, does not know your name, and stores nothing on servers of its own — there are none. It sends anonymous statistics about how it is played, and that can be turned off in settings. Your progress lives only on your device.</p>
+<h2>What is stored on your device</h2>
+<p>All progress is saved <strong>only in the app&#x27;s private storage</strong>:</p>
+<ul>
+<li>dive records and the number of games played</li>
+<li>in-game coins, gems and boosters</li>
+<li>species collected</li>
+<li>the daily reward streak and the day&#x27;s tasks</li>
+<li>sound, language and statistics settings</li>
+</ul>
+<p>None of it is sent anywhere. Deleting the app deletes it permanently — there is no copy, with us or in a cloud. You can also erase it in <strong>Settings → Reset progress</strong>.</p>
 <h2>Usage statistics</h2>
-<p>To find out where the game is confusing or too hard, it sends anonymous events: the start
-and end of a dive, the depth reached, the level number and the reason a level was lost,
-booster use, opening the shop. An event contains no name, no address and nothing that
-identifies a particular person.</p>
-<p>The processor is <strong>Google</strong> (Firebase Analytics, linked to a Google Analytics
-property). Google receives technical device data: model, operating system version, language,
-country and a generated app-instance identifier. That identifier is not tied to a Google
-account and is reset when the app is reinstalled.
-<a href="https://firebase.google.com/support/privacy">Google's policy</a>.</p>
-
+<p>To find out where the game is confusing or too hard, it sends anonymous events: the start and end of a dive, the depth reached, the level number and the reason a level was lost, booster use, opening the shop. An event contains no name, no address and nothing that identifies a particular person.</p>
+<p>The processor is <strong>Google</strong> (Firebase Analytics, linked to a Google Analytics property). Google receives technical device data: model, operating system version, language, country and a generated app-instance identifier. That identifier is not tied to a Google account and is reset when the app is reinstalled. Google&#x27;s policy: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
 <h2>Crash reports</h2>
-<p>If the game crashes, a report goes to <strong>Firebase Crashlytics</strong> (the same
-processor, Google): what broke, on which line, the device model and the OS version. A report
-contains none of your progress and nothing that identifies a particular person.</p>
-<p><strong>Statistics and crash reports are switched off together</strong>, by one setting:
-Settings → "Anonymous usage data". It takes effect immediately, not at the next launch.</p>
-
+<p>If the game crashes, a report goes to <strong>Firebase Crashlytics</strong> (the same processor, Google): what broke, on which line, the device model and the OS version. A report contains none of your progress and nothing that identifies a particular person.</p>
+<p><strong>Statistics and crash reports are switched off together</strong>, by one setting: Settings → &quot;Anonymous usage data&quot;. It takes effect immediately, not at the next launch.</p>
 <h2>Advertising</h2>
-<p>There is no advertising in the current version.</p>
-<p>When there is, it will be <strong>Unity Ads</strong>, rewarded only — a video you may
-choose to watch in exchange for continuing a run or for extra moves. The game <strong>does
-not ask for tracking permission</strong> and does not use the device advertising identifier
-(IDFA): ads are selected by context, not by your history in other apps. This page will be
-updated before such a version ships.</p>
-
+<p>Advertising in the game is <strong>Google AdMob</strong>, and rewarded only: a video you may choose to watch in exchange for continuing a run, for extra moves, for a life or to double a daily reward. Declining closes nothing off — it leaves you exactly where you were. There are no ads between screens, at launch, or over the game.</p>
+<p>The same company that handles the statistics and crash reports described above, so the list of data processors does not grow.</p>
+<p><strong>If you are in the European Economic Area, the United Kingdom or Switzerland</strong>, the game shows Google&#x27;s consent form (UMP) on first launch and asks whether your data may be used for advertising. No ad request is made before you answer, and declining simply means the rewarded offers are not shown. You can return to your answer and change it at any time: <strong>Settings → Ad privacy settings</strong>. That row appears exactly where the form was shown.</p>
+<p>On iOS the game <strong>does not ask for tracking permission</strong> and does not use the device advertising identifier (IDFA): ads are selected by context, not by your history in other apps. On Android the advertising identifier has no separate prompt — it is available to the app unless you turn personalisation off in the system settings, and we declare its use in the Data Safety form.</p>
+<p>Google&#x27;s advertising policy: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
 <h2>Purchases</h2>
-<p>In-app purchases are handled by <strong>Apple</strong>. Payment details go straight to
-Apple — we never see them, receive them or store them. All we are told is that a purchase
-succeeded, so the gems can be credited.</p>
-
+<p>In-app purchases are handled by the platform&#x27;s store: <strong>Apple</strong> on the App Store, <strong>Google</strong> on Google Play. Payment details go straight to them — we never see them, receive them or store them. All we are told is that a purchase succeeded, so the gems can be credited.</p>
+<p>Only gems are bought with money. Coins are earned by playing, and chests are bought with coins — their odds are printed on the chest itself in the shop, before you buy.</p>
 <h2>Children</h2>
-<p>The game is not directed at children and does not knowingly collect data from anyone under
-13. It has no separate children's mode.</p>
-
+<p>The game is not directed at children and does not knowingly collect data from anyone under 13. It has no separate children&#x27;s mode.</p>
 <h2>Your choices</h2>
-<p>Data on the device is removed by resetting progress or deleting the app. Statistics
-collection is switched off in settings. For questions about data Unity processed before you
-switched it off, write to
-<a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a> and we will pass the
-request on.</p>
-
+<p>Data on the device is removed by resetting progress or deleting the app. Statistics collection is switched off in <strong>Settings → &quot;Anonymous usage data&quot;</strong>. Advertising consent, where it was asked for, is changed in <strong>Settings → &quot;Ad privacy settings&quot;</strong>. For questions about data Google processed before you switched it off, write to <a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a> and we will pass the request on.</p>
 <h2>Changes</h2>
-<p>If what is collected ever changes, this page will be updated <strong>before</strong> that
-version ships, stating exactly what is collected and by whom.</p>
-
-</section>
-
+<p>If what is collected ever changes, this page will be updated <strong>before</strong> that version ships, stating exactly what is collected and by whom.</p>
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:dmitrii.raev@gmail.com.">dmitrii.raev@gmail.com.</a></p>
+<hr></section>
 <footer>
-  <p>Deepdrop · версия 0.1.0 · com.draev.deepdrop</p>
+  <p><a href="/">Deepdrop</a> · <a href="/support/">Поддержка / Support</a></p>
+  <p>Deepdrop · com.draev.deepdrop · Dmitrii Raev</p>
 </footer>
-
 </div>
 </body>
 </html>

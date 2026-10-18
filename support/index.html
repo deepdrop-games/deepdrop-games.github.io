@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deepdrop — Поддержка / Support</title>
+<meta name="description" content="Deepdrop support: progress, purchases, chest odds, data settings.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --bg: #04071a; --bg-card: #0a1130; --fg: #e8eefc;
+    --fg-dim: #9fb0d4; --accent: #4fd6e8; --rule: #1a2550;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f5f7fc; --bg-card: #ffffff; --fg: #121a33;
+      --fg-dim: #4d5c80; --accent: #0a7f93; --rule: #dde3f0;
+      color-scheme: light;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 400 17px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap {
+    max-width: 40rem; margin: 0 auto; padding-block: 4rem 5rem;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 0.6rem;
+  }
+  h1 { font-size: clamp(2rem, 7vw, 3rem); line-height: 1.1; margin: 0 0 0.75rem; text-wrap: balance; }
+  .lede { font-size: 1.15rem; color: var(--fg-dim); margin: 0 0 3rem; text-wrap: balance; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 0.6rem; padding-top: 1.75rem; border-top: 1px solid var(--rule); }
+  p, li { color: var(--fg-dim); margin: 0 0 1rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: 0 0 0.35rem; }
+  a { color: var(--accent); }
+  strong { color: var(--fg); }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 3.5rem 0; }
+  .en { color: var(--fg-dim); font-size: 15px; }
+  .lang { margin: 0 0 2.5rem; font-size: 14px; }
+  .lang a { margin-right: 1.25rem; }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 14px; color: var(--fg-dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Поддержка / Support</h1>
+<p>Пиши на <a href="mailto:dmitrii.raev@gmail.com.">dmitrii.raev@gmail.com.</a> Это один человек, а не служба поддержки, так что ответ приходит за несколько дней — но приходит. Приложи модель устройства, версию системы и версию игры (Настройки → внизу экрана).</p>
+<p>Write to <a href="mailto:dmitrii.raev@gmail.com.">dmitrii.raev@gmail.com.</a> This is one person rather than a support desk, so a reply takes a few days — but it comes. Include your device model, your OS version and the game version (Settings → at the bottom of the screen).</p>
+<h2>Прогресс пропал / My progress is gone</h2>
+<p>Прогресс хранится только на устройстве, и серверной копии нет — удаление игры удаляет его навсегда. Если игра всё ещё установлена, напиши: иногда профиль цел, а читается резервная копия.</p>
+<p>Progress is stored only on your device and there is no server copy, so deleting the game deletes it for good. If the game is still installed, write in — sometimes the profile is intact and it is the backup that is being read.</p>
+<h2>Покупка не начислилась / A purchase was not credited</h2>
+<p>Перезапусти игру при работающей сети: незавершённый заказ магазин доставляет заново при следующем запуске, и кристаллы начисляются тогда. Если после этого их нет — напиши, приложив чек от Apple или Google.</p>
+<p>Restart the game with the network on: an unfinished order is redelivered by the store on the next launch and the gems are credited then. If they are still missing, write in and include the receipt from Apple or Google.</p>
+<h2>Шансы в сундуках / Chest odds</h2>
+<p>Сундуки покупаются только за внутриигровые монеты. Сундук тянет один вид из пула, и все виды в пуле равновероятны. Размер пула и сколько видов из него у тебя ещё нет написано на самом сундуке, в магазине, до покупки.</p>
+<p>Chests are bought with in-game coins only. A chest draws one species from a pool, and every species in that pool is equally likely. The size of the pool, and how many of its species you do not have yet, are printed on the chest in the shop, before you buy.</p>
+<h2>Выключить сбор статистики / Turn off usage data</h2>
+<p>Настройки → «Анонимная статистика». Выключение действует сразу, а не со следующего запуска.</p>
+<p>Settings → &quot;Anonymous usage data&quot;. It takes effect immediately, not at the next launch.</p>
+<h2>Изменить согласие на рекламу / Change advertising consent</h2>
+<p>Настройки → «Настройки рекламы». Пункт появляется там, где форма согласия показывалась — в ЕЭЗ, Великобритании и Швейцарии.</p>
+<p>Settings → &quot;Ad privacy settings&quot;. The row appears where the consent form was shown — the EEA, the UK and Switzerland.</p>
+<h2>Стереть всё / Erase everything</h2>
+<p>Настройки → «Сбросить прогресс». Это необратимо.</p>
+<p>Settings → &quot;Reset progress&quot;. There is no undo.</p>
+<footer>
+  <p><a href="/">Deepdrop</a> · <a href="/privacy/">Политика / Privacy</a></p>
+  <p>Deepdrop · com.draev.deepdrop · Dmitrii Raev</p>
+</footer>
+</div>
+</body>
+</html>
