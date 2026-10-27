@@ -71,14 +71,25 @@
 <p>None of it is sent anywhere. Deleting the app deletes it permanently — there is no copy, with us or in a cloud. You can also erase it in <strong>Settings → Reset progress</strong>.</p>
 <h2>Usage statistics</h2>
 <p>To find out where the game is confusing or too hard, it sends anonymous events: the start and end of a dive, the depth reached, the level number and the reason a level was lost, booster use, opening the shop. An event contains no name, no address and nothing that identifies a particular person.</p>
+<p>It also records when the app is opened, and with it the day of the install, the day of the last launch and how many times the app has been opened. These are kept on your device as calendar days, never as clock times, and they are sent only as a count of days — &quot;day 3&quot;, &quot;away for 5 days&quot; — so that it is possible to tell whether a change to the game kept anyone playing. They say nothing about what you did on those days, and nothing about where you were.</p>
 <p>The processor is <strong>Google</strong> (Firebase Analytics, linked to a Google Analytics property). Google receives technical device data: model, operating system version, language, country and a generated app-instance identifier. That identifier is not tied to a Google account and is reset when the app is reinstalled. Google&#x27;s policy: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
 <h2>Crash reports</h2>
 <p>If the game crashes, a report goes to <strong>Firebase Crashlytics</strong> (the same processor, Google): what broke, on which line, the device model and the OS version. A report contains none of your progress and nothing that identifies a particular person.</p>
 <p><strong>Statistics and crash reports are switched off together</strong>, by one setting: Settings → &quot;Anonymous usage data&quot;. It takes effect immediately, not at the next launch.</p>
 <h2>Advertising</h2>
-<p>Advertising in the game is <strong>Google AdMob</strong>, and rewarded only: a video you may choose to watch in exchange for continuing a run, for extra moves, for a life or to double a daily reward. Declining closes nothing off — it leaves you exactly where you were. There are no ads between screens, at launch, or over the game.</p>
+<p>Advertising in the game is <strong>Google AdMob</strong>, in two forms, and both are named here plainly.</p>
+<p><strong>Rewarded.</strong> A video you may choose to watch in exchange for continuing a run, for extra moves, for a life, for a booster or to double a daily reward. Declining closes nothing off — it leaves you exactly where you were.</p>
+<p><strong>Between runs.</strong> A short full-screen ad on the results screen, once the dive is already over. Nobody asks for that one, so it lives by rules written into the game&#x27;s own code rather than into an ad network&#x27;s dashboard:</p>
+<ul>
+<li>a new player&#x27;s first <strong>three</strong> dives carry none at all</li>
+<li>after that, at most one per <strong>two</strong> finished runs</li>
+<li>never twice within <strong>two minutes</strong></li>
+<li>never over a personal record</li>
+<li>never straight after a rewarded video</li>
+</ul>
+<p>There is no advertising during a dive itself: none over the board, none interrupting a move, and none at launch.</p>
 <p>The same company that handles the statistics and crash reports described above, so the list of data processors does not grow.</p>
-<p><strong>If you are in the European Economic Area, the United Kingdom or Switzerland</strong>, the game shows Google&#x27;s consent form (UMP) on first launch and asks whether your data may be used for advertising. No ad request is made before you answer, and declining simply means the rewarded offers are not shown. You can return to your answer and change it at any time: <strong>Settings → Ad privacy settings</strong>. That row appears exactly where the form was shown.</p>
+<p><strong>If you are in the European Economic Area, the United Kingdom or Switzerland</strong>, the game shows Google&#x27;s consent form (UMP) on first launch and asks whether your data may be used for advertising. No ad request is made before you answer, and declining means the advertising SDK is never started at all: neither form of advertising is shown — no rewarded video and no ad between runs. You can return to your answer and change it at any time: <strong>Settings → Ad privacy settings</strong>. That row appears exactly where the form was shown.</p>
 <p>On iOS the game <strong>does not ask for tracking permission</strong> and does not use the device advertising identifier (IDFA): ads are selected by context, not by your history in other apps. On Android the advertising identifier has no separate prompt — it is available to the app unless you turn personalisation off in the system settings, and we declare its use in the Data Safety form.</p>
 <p>Google&#x27;s advertising policy: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
 <h2>Purchases</h2>
@@ -112,14 +123,25 @@
 <p>Эти данные никуда не отправляются. Удаление приложения удаляет их безвозвратно — копии нет ни у нас, ни в облаке. Внутри игры их можно стереть в разделе <strong>Настройки → Сбросить прогресс</strong>.</p>
 <h2>Статистика использования</h2>
 <p>Чтобы понимать, где игра непонятна или слишком сложна, она отправляет обезличенные события: начало и конец погружения, достигнутая глубина, номер уровня и причина проигрыша, использование бустеров, открытие магазина. Событие не содержит ни имени, ни адреса, ни чего-либо, что указывает на конкретного человека.</p>
+<p>Записывается и сам факт запуска, а вместе с ним день установки, день прошлого запуска и сколько раз игра была открыта. На устройстве это хранится календарными днями, без времени суток, и отправляется только как число дней — «день 3», «не заходил 5 дней», — чтобы можно было понять, удержала ли игроков та или иная правка. Что именно ты делал в эти дни и где находился, эти события не содержат.</p>
 <p>Обработчик — <strong>Google</strong> (Firebase Analytics, связанный со свойством Google Analytics). Google получает технические данные устройства: модель, версию операционной системы, язык, страну и сгенерированный идентификатор установки приложения. Этот идентификатор не связан с аккаунтом Google и сбрасывается при переустановке. Политика Google: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
 <h2>Отчёты о сбоях</h2>
 <p>Если игра падает, отчёт уходит в <strong>Firebase Crashlytics</strong> (тот же обработчик — Google): что именно сломалось, на какой строке, модель устройства и версия системы. Отчёт не содержит твоего прогресса и ничего, что указывает на конкретного человека.</p>
 <p><strong>И статистика, и отчёты о сбоях выключаются</strong> одним переключателем: Настройки → «Анонимная статистика». Выключение действует сразу, а не со следующего запуска.</p>
 <h2>Реклама</h2>
-<p>Реклама в игре — <strong>Google AdMob</strong>, и только с вознаграждением: ролик, который можно посмотреть добровольно в обмен на продолжение забега, дополнительные ходы, жизнь или удвоение ежедневной награды. Отказ не закрывает ничего — он просто оставляет тебя там, где ты был. Никакой рекламы между экранами, на старте или поверх игры нет.</p>
+<p>Реклама в игре — <strong>Google AdMob</strong>, в двух видах, и оба названы здесь честно.</p>
+<p><strong>С вознаграждением.</strong> Ролик, который можно посмотреть добровольно в обмен на продолжение забега, дополнительные ходы, жизнь, бустер или удвоение ежедневной награды. Отказ не закрывает ничего — он просто оставляет тебя там, где ты был.</p>
+<p><strong>Между забегами.</strong> Короткая заставка на экране итогов, когда погружение уже закончилось. Её никто не просит, поэтому она живёт по правилам, записанным в коде игры, а не в настройках рекламной сети:</p>
+<ul>
+<li>первые <strong>три</strong> погружения нового игрока — без неё вообще</li>
+<li>дальше не чаще, чем <strong>раз в два</strong> законченных забега</li>
+<li>никогда дважды за <strong>две минуты</strong></li>
+<li>никогда поверх личного рекорда</li>
+<li>никогда сразу после ролика с вознаграждением</li>
+</ul>
+<p>Во время самого погружения рекламы нет: она не появляется над полем, не прерывает ход и не показывается на старте игры.</p>
 <p>Та же компания, что обрабатывает статистику и отчёты о сбоях выше, так что список обработчиков данных не удлиняется.</p>
-<p><strong>Если ты в Европейской экономической зоне, Великобритании или Швейцарии</strong>, при первом запуске игра покажет форму согласия Google (UMP) и спросит, можно ли использовать твои данные для рекламы. До ответа ни одного рекламного запроса не уходит, а отказ значит, что предложения с вознаграждением просто не показываются. Вернуться к своему ответу и изменить его можно в любой момент: <strong>Настройки → Настройки рекламы</strong>. Этот пункт появляется ровно там, где форма была показана.</p>
+<p><strong>Если ты в Европейской экономической зоне, Великобритании или Швейцарии</strong>, при первом запуске игра покажет форму согласия Google (UMP) и спросит, можно ли использовать твои данные для рекламы. До ответа ни одного рекламного запроса не уходит, а отказ значит, что рекламный SDK вообще не поднимается: не показывается ни один из двух видов рекламы — ни ролик с вознаграждением, ни заставка между забегами. Вернуться к своему ответу и изменить его можно в любой момент: <strong>Настройки → Настройки рекламы</strong>. Этот пункт появляется ровно там, где форма была показана.</p>
 <p>На iOS игра <strong>не запрашивает разрешение на отслеживание</strong> и не использует рекламный идентификатор устройства (IDFA): реклама подбирается по контексту, а не по твоей истории в других приложениях. На Android у рекламного идентификатора нет отдельного запроса — он доступен приложению, пока ты не отключишь персонализацию в настройках системы, и мы объявляем его использование в форме Data Safety.</p>
 <p>Политика Google о рекламе: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
 <h2>Покупки</h2>
