@@ -3,19 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Deepdrop</title>
-<meta name="description" content="Deepdrop — a deep-sea block puzzle for iOS and Android. Support and privacy policy.">
+<title>Deepdrop — a deep-sea block puzzle</title>
+<meta name="description" content="Place the blocks, clear the lines, get deeper than you did last time. An offline block puzzle for iOS and Android. No sign-up, no timer.">
+<link rel="icon" href="img/icon.png">
+<meta property="og:title" content="Deepdrop — a deep-sea block puzzle">
+<meta property="og:description" content="Place the blocks, clear the lines, get deeper than you did last time. Offline, no timer, no sign-up.">
+<meta property="og:image" content="https://deepdrop-games.github.io/img/01-dive.jpg">
+<meta property="og:url" content="https://deepdrop-games.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://deepdrop-games.github.io/">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Deepdrop",
+  "description": "A deep-sea block puzzle. Place the blocks, clear the lines, get deeper than you did last time. Offline, no timer, no sign-up.",
+  "url": "https://deepdrop-games.github.io/",
+  "image": "https://deepdrop-games.github.io/img/icon.png",
+  "applicationCategory": "GameApplication",
+  "genre": "Puzzle",
+  "operatingSystem": "iOS, Android",
+  "inLanguage": ["en", "ru", "es", "pt-BR", "de", "fr"],
+  "author": { "@type": "Person", "name": "Dmitrii Raev" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "sameAs": [
+    "https://apps.apple.com/app/id6827552774",
+    "https://play.google.com/store/apps/details?id=com.draev.deepdrop"
+  ]
+}
+</script>
 <style>
   :root {
     --bg: #04071a; --bg-card: #0a1130; --fg: #e8eefc;
     --fg-dim: #9fb0d4; --accent: #4fd6e8; --rule: #1a2550;
+    --btn-fg: #04071a;
     color-scheme: dark;
   }
   @media (prefers-color-scheme: light) {
     :root:not([data-theme="dark"]) {
       --bg: #f5f7fc; --bg-card: #ffffff; --fg: #121a33;
       --fg-dim: #4d5c80; --accent: #0a7f93; --rule: #dde3f0;
+      --btn-fg: #ffffff;
       color-scheme: light;
     }
   }
@@ -26,47 +56,107 @@
     -webkit-text-size-adjust: 100%;
   }
   .wrap {
-    max-width: 40rem; margin: 0 auto; padding-block: 4rem 5rem;
+    max-width: 44rem; margin: 0 auto; padding-block: 3.5rem 5rem;
     padding-left: max(20px, env(safe-area-inset-left, 0px));
     padding-right: max(20px, env(safe-area-inset-right, 0px));
   }
+
+  /* ---- hero ---- */
+  .hero { display: flex; gap: 1.25rem; align-items: center; margin: 0 0 1.5rem; flex-wrap: wrap; }
+  .hero img { width: 88px; height: 88px; border-radius: 20px; flex: none; }
+  .hero h1 { font-size: clamp(2.1rem, 8vw, 3.1rem); line-height: 1.05; margin: 0 0 0.2rem; }
   .eyebrow {
     font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--accent); margin: 0 0 0.6rem;
+    color: var(--accent); margin: 0;
   }
-  h1 { font-size: clamp(2rem, 7vw, 3rem); line-height: 1.1; margin: 0 0 0.75rem; text-wrap: balance; }
-  .lede { font-size: 1.15rem; color: var(--fg-dim); margin: 0 0 3rem; text-wrap: balance; }
-  h2 { font-size: 1.1rem; margin: 2.5rem 0 0.6rem; padding-top: 1.75rem; border-top: 1px solid var(--rule); }
+  .lede { font-size: 1.2rem; color: var(--fg-dim); margin: 0 0 2rem; text-wrap: balance; }
+
+  .stores { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0 0 3.5rem; }
+  .store {
+    display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
+    background: var(--accent); color: var(--btn-fg); font-weight: 600; font-size: 16px;
+    text-decoration: none;
+  }
+  .store.alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+
+  /* ---- shots ---- */
+  .shots {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin: 0 0 1rem;
+  }
+  .shots img {
+    width: 100%; height: auto; border-radius: 12px; display: block;
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 560px) { .shots { grid-template-columns: repeat(2, 1fr); } }
+  .caption { font-size: 14px; color: var(--fg-dim); margin: 0 0 3rem; }
+
+  h2 { font-size: 1.1rem; margin: 2.75rem 0 0.7rem; padding-top: 1.75rem; border-top: 1px solid var(--rule); }
   p, li { color: var(--fg-dim); margin: 0 0 1rem; }
   ul { padding-left: 1.2rem; }
-  li { margin: 0 0 0.35rem; }
+  li { margin: 0 0 0.4rem; }
   a { color: var(--accent); }
   strong { color: var(--fg); }
-  hr { border: 0; border-top: 1px solid var(--rule); margin: 3.5rem 0; }
-  .en { color: var(--fg-dim); font-size: 15px; }
-  .lang { margin: 0 0 2.5rem; font-size: 14px; }
-  .lang a { margin-right: 1.25rem; }
   footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 14px; color: var(--fg-dim); }
+  footer p { margin: 0 0 0.4rem; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<p class="eyebrow">iOS · Android</p>
-<h1>Deepdrop</h1>
-<p class="lede">A puzzle about going down. Place the blocks, clear the lines, get deeper than
-you did last time. Lum's lantern reaches exactly as far as you are careful.</p>
+<div class="hero">
+  <img src="img/icon.png" alt="Deepdrop icon" width="88" height="88">
+  <div>
+    <p class="eyebrow">iOS · Android · free</p>
+    <h1>Deepdrop</h1>
+  </div>
+</div>
+
+<p class="lede">Place the blocks, clear the lines, get deeper than you did last time.
+Lum's lantern reaches exactly as far as you are careful.</p>
+
+<div class="stores">
+  <a class="store" href="https://apps.apple.com/app/id6827552774">App Store</a>
+  <a class="store alt" href="https://play.google.com/store/apps/details?id=com.draev.deepdrop">Google&nbsp;Play</a>
+</div>
+
+<div class="shots">
+  <img src="img/01-dive.jpg" alt="The 8×8 board mid-dive, three pieces waiting in the tray" loading="lazy">
+  <img src="img/03-map.jpg" alt="The expedition map, with chapters that open by depth" loading="lazy">
+  <img src="img/04-collection.jpg" alt="The collection of sea creatures, unfound ones as silhouettes" loading="lazy">
+  <img src="img/07-study.jpg" alt="Studying a species to raise its rank" loading="lazy">
+</div>
+<p class="caption">A dive, the map, the collection, and a species being studied.</p>
+
+<h2>What it is</h2>
+<p>An 8×8 board, three pieces in the tray, and no clock anywhere. Every line you clear is
+metres of depth. When nothing fits any more the dive is over and only the record remains —
+which makes the record yours and nobody else's.</p>
+<ul>
+  <li>An endless dive with no timer; four lines in a row shake gear loose from the seabed</li>
+  <li>Levels with objectives, and map chapters that open by depth rather than by a checklist</li>
+  <li>Four zones — reef, coral, ice, abyss — each changing the board under you</li>
+  <li>Twenty-five sea creatures to collect; the ones you have not found stay silhouettes</li>
+  <li>Six languages: English, Russian, Spanish, Portuguese, German, French</li>
+  <li>Plays entirely offline</li>
+</ul>
+
+<h2>Straight about data</h2>
+<p>No sign-up — the game does not know your name. Progress lives on your device; there are
+no servers of ours. Anonymous statistics and crash reports go through Firebase, and one
+switch turns both off, at the moment you flip it rather than at the next launch.
+<a href="/privacy/">Full privacy policy</a>.</p>
+
+<h2>Straight about money</h2>
+<p>Gems are bought with money; coins are only played for, and neither turns into the other.
+Chests are bought with coins, and the odds are printed on the chest before you buy it.</p>
+<p>Rewarded videos are watched on purpose, in exchange for carrying on. Between runs there is
+sometimes a short ad — never in your first three dives, never more than one every second run,
+and never on top of a personal record.</p>
 
 <h2>Support</h2>
 <p>Questions, bugs, ideas — write to <a href="mailto:dmitrii.raev@gmail.com">dmitrii.raev@gmail.com</a>.
 If the game crashed, include your device model and OS version; that is usually enough.
 Common questions are answered on the <a href="/support/">support page</a>.</p>
-
-<h2>Data</h2>
-<p>No sign-up, and no servers of ours — progress lives on your device. The game sends
-anonymous statistics and crash reports through Firebase, and one setting switches both off.
-Ads are rewarded only, and always optional.
-<a href="/privacy/">Full privacy policy</a>.</p>
 
 <footer>
   <p><a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
